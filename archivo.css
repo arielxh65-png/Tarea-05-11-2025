@@ -1,0 +1,224 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #0078d7, #005a9e);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    animation: tituloAnimacion 2s ease-in-out;
+}
+
+h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+    animation: tituloAnimacion 2s ease-in-out;
+}
+
+/* Contenido principal */
+main {
+    padding: 40px 0;
+}
+
+.descripcion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.paginas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pagina-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.pagina-card h3 {
+    color: #0078d7;
+    margin-bottom: 15px;
+    animation: tituloAnimacion 2s ease-in-out;
+}
+
+/* Tablas */
+.tabla-container {
+    overflow-x: auto;
+    margin: 40px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #0078d7;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #f1f1f1;
+    transition: background 0.3s;
+}
+
+/* Equipo */
+.equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.empleado-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.empleado-card:hover {
+    transform: translateY(-10px);
+}
+
+.empleado-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #0078d7;
+    animation: imagenAnimacion 3s infinite alternate;
+}
+
+.empleado-info {
+    padding: 20px;
+}
+
+.empleado-info h3 {
+    color: #0078d7;
+    margin-bottom: 10px;
+}
+
+.empleado-info p {
+    margin-bottom: 10px;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    background: #0078d7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #005a9e;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.botones {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Pie de página */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Animaciones */
+@keyframes tituloAnimacion {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imagenAnimacion {
+    0% {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+    100% {
+        filter: brightness(1.1);
+        transform: scale(1.02);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .paginas {
+        grid-template-columns: 1fr;
+    }
+    
+    .equipo {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: 200px;
+    }
+}
